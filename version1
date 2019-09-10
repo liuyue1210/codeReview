@@ -1,3 +1,9 @@
+#include <iostream>
+#include <stdio.h>
+#include <string>
+
+using namespace std;
+
 bool isWin(char game[3][3]){
 
       bool win = false;
@@ -57,6 +63,16 @@ int main(){
                   cout << "Which cell to mark? i:[0..2], j:[0..2]: ";
 
                   cin >> i >> j;
+                  
+                  if (i < 0 || i > 2 || j < 0 || j > 2){
+                     
+                     cout << "Invalid Input!" << endl;
+                     
+                     --n;
+                     
+                     continue;
+                     
+                  }
 
                   if (turn == false)
 
